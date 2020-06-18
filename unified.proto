@@ -6,10 +6,11 @@ package unified;
 message Request {
 }
 
+
 message Response {
   string traceId = 1;
   int32  status =2;
   string desc = 3;
-  repeated google.protobuf.Any items = 4;
+  google.protobuf.Any items = 4;
 }
 
