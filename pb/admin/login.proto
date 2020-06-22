@@ -1,8 +1,8 @@
 syntax = "proto3";
 import "admin/role.proto";
 import "unified.proto";
-package login;
-option go_package = "github.com/ops-cn/proto/admin/login";
+package admin;
+option go_package = "github.com/ops-cn/proto/admin";
 
 service login {
   rpc GetCaptcha (Length) returns(unified.Response) {}
@@ -37,7 +37,7 @@ message UserLoginInfo {
   // @inject_tag: valid:"real_name"
   string RealName = 3;
 
-  repeated role.Role Roles = 4;
+  repeated Role Roles = 4;
 }
 
 message UpdatePasswordParam {

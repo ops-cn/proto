@@ -1,7 +1,7 @@
 syntax = "proto3";
 import "google/protobuf/timestamp.proto";
-option go_package = "github.com/ops-cn/proto/admin/user";
-package user;
+option go_package = "github.com/ops-cn/proto/admin";
+package admin;
 
 message User {
   string ID = 1;
@@ -25,4 +25,8 @@ message UserRole {
   string UserID =2;
   // @inject_tag: valid:"role_id"
   string RoleID =3;
+}
+
+message UserQueryParam {
+
 }

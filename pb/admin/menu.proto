@@ -1,7 +1,8 @@
 syntax = "proto3";
 import "google/protobuf/timestamp.proto";
-option go_package = "github.com/ops-cn/proto/admin/menu";
-package menu;
+import "unified.proto";
+option go_package = "github.com/ops-cn/proto/admin";
+package admin;
 
 message Menu {
   string ID = 1;
@@ -39,4 +40,14 @@ message RoleQueryParam {
   string QueryValue = 3;
   string UserID = 4;
   int32  Status = 5;
+}
+message MenuQueryParam {
+  unified.PaginationParam PaginationParam = 1;
+  repeated string IDs = 2;
+  string Name = 3;
+  string PrefixParentPath = 4;
+  string QueryValue = 5;
+  string ParentID = 6;
+  int32 ShowStatus = 7;
+  int32 Status = 8;
 }

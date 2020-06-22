@@ -1,7 +1,7 @@
 syntax = "proto3";
 import "google/protobuf/timestamp.proto";
-option go_package = "github.com/ops-cn/proto/admin/role";
-package role;
+option go_package = "github.com/ops-cn/proto/admin";
+package admin;
 
 message Role {
   string ID = 1;
